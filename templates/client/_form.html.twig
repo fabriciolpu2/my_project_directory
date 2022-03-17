@@ -1,0 +1,43 @@
+{# {{ form_start(form) }} #}
+    
+    <form action="{{ path('app_client_save') }}" method="POST">
+    {# <form action="client/new" method="POST"> #}
+        <div class="form-group">
+            <label for="name">Nome</label>
+            {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            <label for="doc">CPF</label>
+            {{ form_widget(form.doc, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <ul>
+        {% for phone in form.phones %}
+        <div class="form-group">
+            <li>
+                {{ form_widget(phone) }}
+            </li>
+        </div>
+        {% endfor %}
+        </ul>
+        
+            {# <label for="phone_number">Telefone</label> #}
+            {# {{ form_widget(form.p, {'attr': {'class': 'form-control'}}) }} #}
+            {# <input type="text" class="form-control" id="phone_number" placeholder=""> #}
+        
+        {# <div class="form-group">
+            <label for="phone_type">Telefone Tipo</label>
+            <select class="form-control" id="phone_type">
+                <option value="MOBILE">Celular</option>
+                <option value="LANDLINE">Linha</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="company_id">Operadora</label>
+            <select class="form-control" id="company_id">
+                <option value="1">Vivo</option>
+                <option value="2">Tim</option>
+            </select>
+        </div> #}
+        <button class="btn">{{ button_label|default('Save') }}</button>
+    </form>
+{# {{ form_end(form) }} #}

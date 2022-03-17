@@ -1,0 +1,12 @@
+Opa, Fabrício. Tudo bem? O desafio usando PHP Symfony é o seguinte:
+
+1) Elaborar um CRUD contendo as seguintes entidades:
+   1.1) Client
+   1.2) Phone
+   1.3) Company
+2) As relações entre as entidades são:
+   2.1) Client 1>N Phones
+   2.2) Phone 1>1 Company
+3) Na entidade Client deverá conter o campo "name", "doc"
+4) Na entidade Phone deverá conter o campo "number" e "type" que deverá ser criada com as opções de constante "MOBILE" e "LANDLINE"
+5) Na entidade Company deverá conter somente o campo campo "nome".
